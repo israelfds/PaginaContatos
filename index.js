@@ -14,6 +14,7 @@ function ApagaRegistro(id) {
     }
 }
 
+
 function EditaRegistro(id) {
     $("#modalRegistro").modal("show")
 
@@ -52,13 +53,11 @@ function PopulaTabela() {
 
 $(function () {
     //EXECUTA AO CARREGAR DA TELA
-    dados = JSON.parse(localStorage.getItem("__dados__")) ?? []//REVER ESSA ULTIMA EXPRESSÃO.
+    dados = JSON.parse(localStorage.getItem("__dados__")) ?? [];
 
     if (dados) {
         PopulaTabela()
     }
-
-    //var mydata = JSON.parse(dataBase);
 
     $("#btnSalvar").click(function () {
         //EVENTO CLICK DO BOTÃO SALVAR
